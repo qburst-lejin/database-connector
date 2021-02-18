@@ -1,0 +1,54 @@
+{
+  "objectDefinitions": [
+    {
+      "name": "employee",
+      "propertyDefinitions": [
+        {
+          "name": "ID",
+          "isReturnable": true,
+          "isWildcardSearchable": false,
+          "integerPropertyOptions": {
+            "operatorOptions": {
+              "operatorName": "id"
+            }
+          },
+          "displayOptions": {
+            "displayLabel": "employee id"
+          }
+        },
+        {
+          "name": "name",
+          "isReturnable": true,
+          "isWildcardSearchable": true,
+          "textPropertyOptions": {
+            "retrievalImportance": {
+              "importance": "HIGHEST"
+            },
+            "operatorOptions": {
+              "operatorName": "name",
+              "exactMatchWithOperator": false
+            }
+          },
+          "displayOptions": {
+            "displayLabel": "Employee name"
+          }
+        },
+        {
+          "name": "location",
+          "isReturnable": true,
+          "isFacetable": true,
+          "isSortable": false,
+          "textPropertyOptions": {
+            "operatorOptions": {
+              "operatorName": "location",
+              "exactMatchWithOperator": true
+            }
+          },
+          "displayOptions": {
+            "displayLabel": "Employee location"
+          }
+        }
+      ]
+    }
+  ]
+}

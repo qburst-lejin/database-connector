@@ -422,12 +422,13 @@ class DatabaseRepository implements Repository {
       }
     }
     return IndexingItemBuilder.fromConfiguration(
-        UniqueKey.makeUniqueId(columnManager.getUniqueKey(), allColumnValues)) // name
-        .setValues(multiMapValues)
-        .setAcl(columnManager.createAclIfEnabled(allColumnValues))
-        .setItemType(ItemType.CONTENT_ITEM)
-        .setSourceRepositoryUrl(FieldOrValue.withValue(columnManager.getViewUrl(allColumnValues)))
-        .build();
+            UniqueKey.makeUniqueId(columnManager.getUniqueKey(), allColumnValues)) // name
+            .setValues(multiMapValues)
+            .setObjectType("employee")
+            .setAcl(columnManager.createAclIfEnabled(allColumnValues))
+            .setItemType(ItemType.CONTENT_ITEM)
+            .setSourceRepositoryUrl(FieldOrValue.withValue(columnManager.getViewUrl(allColumnValues)))
+            .build();
   }
 
   /**
